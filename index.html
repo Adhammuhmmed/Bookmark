@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="icon" href="Images/bookmark.png" />
+    <!-- Google Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="Css/all.min.css" />
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <!-- Main Style  -->
+    <link rel="stylesheet" href="Css/main.css" />
+  </head>
+  <body>
+      <div class="title p-3 text-center mx-auto">
+        <div class="container">
+          <div class="title-text">
+            <h1 class="position-relative mx-auto">Bookmaker</h1>
+          </div>
+          <h2 class="pt-3 mt-3">
+            <span><i class="fa-solid fa-bookmark"></i></span> Bookmark your
+            favorite sites <span><i class="fa-solid fa-bookmark"></i></span>
+          </h2>
+        </div>
+      </div>
+      <!-- Start Form -->
+      <div class="form position">
+        <div class="container">
+          <label for="bookMarkName" class="py-2"
+            ><span class="pe-2"><i class="fa-solid fa-book-bookmark"></i></span
+            >Site Name</label
+          >
+          <input
+            oninput="validName()"
+            type="text"
+            class="form-control mb-3"
+            placeholder="Bookmark Name"
+            id="bookMarkName"
+          />
+
+          <label for="webSiteUrl" class="py-2"
+            ><span class="pe-2"><i class="fa-solid fa-link"></i></span>Site
+            URL</label
+          >
+          <input
+            oninput="validUrl()"
+            type="url"
+            class="form-control"
+            placeholder="Website Url"
+            id="webSiteUrl"
+          />
+          <button
+            onclick="addData()"
+            type="button"
+            class="btn btn-success my-3"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+      <!-- End Form -->
+      <!-- Start Table -->
+      <div class="table py-3">
+        <div class="container">
+          <table class="table text-center">
+            <thead>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visite</th>
+              <th>Delete</th>
+            </thead>
+            <tbody class="text-capitalize" id="tableData">
+              <tr></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- End Table -->
+      <div id="infoMsg" class="invalid-msg d-none">
+        <div class="container">
+          <div class="text-box bg-light rounded-2 shadow-lg">
+            <div class="head p-2 d-flex justify-content-between">
+              <div class="color d-flex">
+                <div class="red me-2"></div>
+                <div class="orange me-2"></div>
+                <div class="green me-2"></div>
+              </div>
+              <div class="cancel">
+                <span id="xMark" class="x-mark"
+                  ><i class="fa-solid fa-xmark"></i
+                ></span>
+              </div>
+            </div>
+            <div class="text p-2 py-3">
+              <h3 class="h5">
+                Site Name or Url is not valid, Please follow the rules below :
+              </h3>
+              <p class="pt-3">
+                <span class="icon pe-2"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right text-danger"
+                  ></i></span
+                >Site name must contain at least 3 characters
+              </p>
+              <p class="">
+                <span class="icon pe-2"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right text-danger"
+                  ></i></span
+                >Site URL must be a valid one
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- BootStrap Js -->
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <!-- Main Js  -->
+    <script src="Js/index.js"></script>
+  </body>
+</html>
