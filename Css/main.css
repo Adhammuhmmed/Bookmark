@@ -32,7 +32,7 @@ body {
 
 .title h2 {
   font-family: "Righteous", sans-serif;
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
   font-weight: 500;
   background-image: linear-gradient(to right, #3ca55c, #b5ac49);
   background-clip: text;
@@ -110,13 +110,4 @@ body {
   font-size: 1.3125rem;
   font-family: "Bree Serif", serif;
   font-weight: 400;
-}
-
-.black-bg {
-  background-color: rgba(0, 0, 0, 0.651);
-  position: sticky;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
 }
